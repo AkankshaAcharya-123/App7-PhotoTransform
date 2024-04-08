@@ -24,10 +24,10 @@
   http://stackoverflow.com/questions/11929099/html5-canvas-drawimage-ratio-bug-ios
   
   Brief Description of Goal of Code:
-  blah, blah, blah,
+  To display only blue color of the image after the user uploads an image of their choice. 
  
   Known Issues:
-  blah, blah, blah, blah
+  N/A
 -->
 
  <head>
@@ -142,6 +142,16 @@
         context.fillStyle = "black";
         context.fillText("Original image will go here", 10, 20);
       </script>
+
+      <canvas id="newCanvas" width=600 height=500 style="border:1px solid #d3d3d3;"></canvas>
+      <script> /* This script initiates the cavas and puts the text on the canvas "myCanvas" */
+        var canvas = document.getElementById('newCanvas');
+        var context = canvas.getContext("2d");
+        context.font = '20pt Calibri';
+        context.fillStyle = "black";
+        context.fillText("New image will go here", 10, 20);
+      </script>
+
 
     </div><!-- /content -->
     <div data-role="footer" data-position="fixed">
