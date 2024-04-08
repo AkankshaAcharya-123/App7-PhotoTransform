@@ -101,7 +101,8 @@
           /*  ++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
           /* PUT ANY CHANGES TO THE JAVASCRIPT HERE  */
-          
+          drawImageIOSFix(newContext,img, 0, 0, img.naturalWidth, img.naturalHeight, 0, 0, 600, 500);
+
           
           
           
@@ -135,21 +136,19 @@
       <div id="messageDisplayArea"></div>
       
       <canvas id="myCanvas" width=600 height=500 style="border:1px solid #d3d3d3;"></canvas>
+
+      <canvas id="newCanvas" width=600 height=500 style="border:1px solid #d3d3d3;"></canvas>
       <script> /* This script initiates the cavas and puts the text on the canvas "myCanvas" */
         var canvas = document.getElementById('myCanvas');
         var context = canvas.getContext("2d");
         context.font = '20pt Calibri';
         context.fillStyle = "black";
         context.fillText("Original image will go here", 10, 20);
-      </script>
-
-      <canvas id="newCanvas" width=600 height=500 style="border:1px solid #d3d3d3;"></canvas>
-      <script> /* This script initiates the cavas and puts the text on the canvas "myCanvas" */
-        var canvas = document.getElementById('newCanvas');
-        var context = canvas.getContext("2d");
-        context.font = '20pt Calibri';
-        context.fillStyle = "black";
-        context.fillText("New image will go here", 10, 20);
+        var newCanvas = document.getElementById('newCanvas');
+        var newContext = newCanvas.getContext("2d");
+        newContext.font = '20pt Calibri';
+        newContext.fillStyle = "black";
+        newContext.fillText("New image will go here", 10, 20);
       </script>
 
 
